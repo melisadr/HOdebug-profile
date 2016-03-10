@@ -20,7 +20,7 @@
 #include <string.h>
 #include <stdio.h>
 
-#define SIZE 1000
+#define SIZE 10
 
 void mat_Tmat_mul( float * A, float * C ){
 
@@ -37,6 +37,8 @@ void mat_Tmat_mul( float * A, float * C ){
     for( j = 0; j < SIZE; j++ )
       for( k = 0; k < SIZE; k++ )
 	C[ ( i * SIZE ) + j ] += A[ ( i * SIZE ) + k ] * temp[ ( k * SIZE ) + j ] ;
+
+  free(temp);
   
 }
 
@@ -56,7 +58,7 @@ int main( int argc, char * argv[] ){
    
   memset( C, 0, SIZE * SIZE * sizeof(float) );
   
-  for(;;) mat_Tmat_mul( A, C );
+  for(i=0;i<10;i++) mat_Tmat_mul( A, C );
   
   free( A );
   free( C );

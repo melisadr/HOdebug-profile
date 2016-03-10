@@ -1,0 +1,18 @@
+#FPE1 con -DTRAPFPE
+sin esa flag, me corría normalmente y el resultado de una division por cero daba infinito
+con la flag, y compilado como se ve abajo  aparece ***Excepción de coma flotante (`core' generado)***
+
+
+##Compila libreria
+
+```
+cd fpe_x87_sse/
+gcc -c fpe_x87_sse.c
+``` 
+
+## Genera objeto
+
+```
+gcc -DTRAPFPE -c test_fpe1.c -o test_fpe1_o.o
+gcc test_fpe1.o  ./fpe_x87_sse/fpe_x87_sse.o -lm
+```
