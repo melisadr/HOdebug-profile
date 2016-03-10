@@ -35,7 +35,7 @@ static: add_array_static.e
 nobugs: add_array_nobugs.e 
 
 %_c.o: %.c
-	$(CC) -c $^ -o $@
+	$(CC) -g -O0 -c $^ -o $@
 
 %.e: %_c.o
 	$(LD) $^ -o $@

@@ -22,3 +22,4 @@ int main(int argc, char **argv) {
   printf("The addition is %d\n", sum);
   return 0;
 }
+/* tengo que alocar los arrays, reservando memoria para a y b, por eso sale el error de segmentation fault ir a dynamic */

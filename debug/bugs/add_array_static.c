@@ -11,7 +11,7 @@ int add_array(int *a, int *b, int n){
 }
 
 int main(int argc, char **argv) {
-  int a[3], b[3];
+  int a[3], b[3]; /* array estatico*/
   int n = 3;
   int i, sum;
   for (i = 0; i < n; i++) {
@@ -22,3 +22,5 @@ int main(int argc, char **argv) {
   printf("The addition is %d\n", sum);
   return 0;
 }
+/* esta tratando de acceder a una posicion de memoria que no esta reservada para ese array*/
+/* donde dice n en la función, tiene que estar n+1*/

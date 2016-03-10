@@ -25,3 +25,8 @@ int main(int argc, char **argv) {
   printf("The addition is %d\n", sum);
   return 0;
 }
+
+/* tiene un bug pero con malloc no salta porque te da
+segmentos de memoria y lo que no se ocupa, se pone en 
+cero
+si se pone n, en lugar de n+1, hay que poner n*/
