@@ -59,3 +59,10 @@ El ciclo inicialmente era un ciclo infinito, con lo cual, el programa nunca term
 Luego de correrlo con valgrind, se vio que la funcion estaba alocando arrays y no los estaba liberando. 
 Se arreglo este problema y el programa funciono correcatamente.
 
+#funny
+Cuando ejecute funny sin flag, por pantalla solo me decía que había una violación de segmento, pero no me decía donde.
+Al ejecutarlo con esa flag, el programa tenía unas lineas de código que enviaban un mensaje de error como si fuese un debugger manual, por decirlo de alguna forma. 
+El problema estaba en el malloc que tenía una dimensión muy grande en comparación con el tamaño del stack. 
+
+
+
